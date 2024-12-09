@@ -58,10 +58,6 @@ public class Rectangle {
     }
 
 
-    public void calculateArea(){
-
-        System.out.println("Alan = " + a*b);
-    }
     public void calculateArea(int a, int b){
 
         System.out.println("Alan = " + a*b);
