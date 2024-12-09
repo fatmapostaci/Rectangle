@@ -40,12 +40,7 @@ public class Rectangle {
         this.perimeter = perimeter;
     }
 
-    public void getInputs(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Dikdörtgenin kenar uzunluklarını girin: ");
-        this.a = sc.nextInt();
-        this.b = sc.nextInt();
-    }
+
     public void calculateArea(int a, int b){
 
         System.out.println("Alan = " + a*b);
