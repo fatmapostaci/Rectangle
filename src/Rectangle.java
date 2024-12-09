@@ -7,6 +7,23 @@ public class Rectangle {
     private int area;
     private int perimeter;
 
+    public Rectangle() {
+    }
+
+    public Rectangle(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "a=" + a +
+                ", b=" + b +
+                ", area=" + area +
+                ", perimeter=" + perimeter +
+                '}';
+    }
 
     public int getA() {
         return a;

@@ -8,24 +8,30 @@ Runeer class'da obj ile cevre ve alan değelerini print eden code create ediniz.
 public class Runner {
     public static void main(String[] args) {
 
-        Rectangle islem = new Rectangle();
-        //1
-        islem.calculatePerimeter(3, 4);
-        islem.calculateArea(4, 5);
 
-        //2
+
+
         Scanner sc = new Scanner(System.in);
+
+        //boş constructor ile hesaplama
+        Rectangle islem = new Rectangle();
         System.out.println("Dikdörtgenin kenar uzunluklarını girin: ");
+        //dışarıdan alınan verileri objenin özelliği olarak set eder
         islem.setA(sc.nextInt());
         islem.setB(sc.nextInt());
+        //objenin tuttuğu değerleri get ederek methodlara gönderdim
         islem.calculateArea(islem.getA(), islem.getB());
         islem.calculatePerimeter(islem.getA(), islem.getB());
 
-        //3
-        islem.setArea(islem.getA()* islem.getB());
-        System.out.println("islem.getArea() = " + islem.getArea());
-        islem.setPerimeter( 2*( islem.getA()+islem.getB() ));
-        System.out.println("islem.getPerimeter() = " + islem.getPerimeter());
+
+
+        //2 parametreli constructor ile hesaplama
+        System.out.println("Dikdörtgenin kenar uzunluklarını girin: ");
+        Rectangle islem2 = new Rectangle(sc.nextInt(),sc.nextInt());
+        islem.setArea(islem2.getA()* islem2.getB());
+        islem.setPerimeter( 2*( islem2.getA()+islem2.getB() ));
+        System.out.println( islem );
+
     }
 
 }
