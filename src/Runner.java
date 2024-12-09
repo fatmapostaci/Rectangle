@@ -14,23 +14,26 @@ public class Runner {
         Scanner sc = new Scanner(System.in);
 
         //boş constructor ile hesaplama
-        Rectangle islem = new Rectangle();
+
         System.out.println("Dikdörtgenin kenar uzunluklarını girin: ");
         //dışarıdan alınan verileri objenin özelliği olarak set eder
+        Rectangle islem = new Rectangle();
         islem.setA(sc.nextInt());
         islem.setB(sc.nextInt());
-        //objenin tuttuğu değerleri get ederek methodlara gönderdim
-        islem.calculateArea(islem.getA(), islem.getB());
-        islem.calculatePerimeter(islem.getA(), islem.getB());
 
+        islem.calculateArea();
+        islem.calculatePerimeter();
+
+        System.out.println(islem);
 
 
         //2 parametreli constructor ile hesaplama
         System.out.println("Dikdörtgenin kenar uzunluklarını girin: ");
         Rectangle islem2 = new Rectangle(sc.nextInt(),sc.nextInt());
-        islem.setArea(islem2.getA()* islem2.getB());
-        islem.setPerimeter( 2*( islem2.getA()+islem2.getB() ));
-        System.out.println( islem );
+        islem2.calculateArea();
+        islem2.calculatePerimeter();
+
+        System.out.println( islem2 );
 
     }
 

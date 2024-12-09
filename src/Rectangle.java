@@ -25,6 +25,16 @@ public class Rectangle {
                 '}';
     }
 
+    public void calculatePerimeter(){
+        setPerimeter(2*(a+b));
+    }
+    public void calculateArea(){
+        setArea(a*b);
+    }
+
+
+
+    //getter ve setterlar
     public int getA() {
         return a;
     }
@@ -58,12 +68,6 @@ public class Rectangle {
     }
 
 
-    public void calculateArea(int a, int b){
 
-        System.out.println("Alan = " + a*b);
-    }
-    public void calculatePerimeter(int a, int b){
-        System.out.println("Çevre = " + 2*(a+b));
-    }
 
 }
